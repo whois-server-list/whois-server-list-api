@@ -27,8 +27,8 @@ This API is just a compilation of JAXB generated domain model classes:
 
  * `Domain`
 
- You can use `ServerListFactory` for downloading and
- unmarshalling the whois server list:
+You can use `ServerListFactory` for downloading and
+unmarshalling the whois server list:
 
 ```java
 ServerListFactory factory = new ServerListFactory();
