@@ -6,13 +6,13 @@ This is a JAVA API for accessing the
 
 # Installation
 
-This package will be available in Maven central:
+This package is available in Maven central:
 
 ```xml
 <dependency>
         <groupId>de.malkusch.whois-server-list.api.v0</groupId>
         <artifactId>whois-server-list-api</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
+        <version>0.0.1</version>
 </dependency>
 ```
 
@@ -21,14 +21,15 @@ This package will be available in Maven central:
 
 This API is just a compilation of JAXB generated domain model classes:
 
- * `ServerList`
+ * [`ServerList`](http://whois-server-list.github.io/whois-server-list-api/apidocs/de/malkusch/whoisServerList/api/v0/model/Serverlist.html)
 
- * `Server`
+ * [`Server`](http://whois-server-list.github.io/whois-server-list-api/apidocs/de/malkusch/whoisServerList/api/v0/model/Server.html)
 
- * `Domain`
+ * [`Domain`](http://whois-server-list.github.io/whois-server-list-api/apidocs/de/malkusch/whoisServerList/api/v0/model/Domain.html)
 
-You can use `ServerListFactory` for downloading and
-unmarshalling the whois server list:
+You can use
+[`ServerListFactory`](http://whois-server-list.github.io/whois-server-list-api/apidocs/de/malkusch/whoisServerList/api/v0/ServerListFactory.html)
+for downloading and unmarshalling the whois server list:
 
 ```java
 ServerListFactory factory = new ServerListFactory();
