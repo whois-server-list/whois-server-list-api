@@ -5,11 +5,11 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Properties;
 
+import javax.annotation.concurrent.Immutable;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
 
-import net.jcip.annotations.Immutable;
 import de.malkusch.whoisServerList.api.v0.model.Serverlist;
 
 /**
