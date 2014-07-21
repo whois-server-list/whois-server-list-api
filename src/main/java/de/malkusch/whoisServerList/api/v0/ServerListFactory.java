@@ -14,9 +14,9 @@ import de.malkusch.whoisServerList.api.v0.model.Serverlist;
 
 /**
  * Factory for the Whois Server List.
- * 
+ *
  * @author markus@malkusch.de
- * 
+ *
  * @see <a href="https://github.com/whois-server-list/whois-server-list">Whois
  *      Server List</a>
  * @see <a href="bitcoin:1335STSwu9hST4vcMRppEPgENMHD2r1REK">Donations</a>
@@ -28,7 +28,7 @@ public final class ServerListFactory {
      * The configuration property for the server list url.
      */
     public static final String PROPERTY_URL = "whoisserverlist.url";
-    
+
     /**
      * The configuration property for the bundled server list file.
      */
@@ -41,7 +41,7 @@ public final class ServerListFactory {
 
     /**
      * Returns the bundled default configuration.
-     * 
+     *
      * @return the bundled configuration
      */
     private static Properties getDefaults() {
@@ -59,7 +59,7 @@ public final class ServerListFactory {
 
     /**
      * Builds a new server list from an URL.
-     * 
+     *
      * @param properties  the server list url, not null
      * @return the server list
      * @throws JAXBException If unmarshalling failed
@@ -72,27 +72,27 @@ public final class ServerListFactory {
 
     /**
      * Builds a new server list from the locally bundled server list.
-     * 
+     *
      * @return the server list
      * @throws JAXBException If unmarshalling failed
      */
     public Serverlist build() {
         try {
             Properties defaults = getDefaults();
-            URL localList 
+            URL localList
                 = getClass().getResource(defaults.getProperty(PROPERTY_FILE));
-        
+
             return build(localList);
-            
+
         } catch (JAXBException e) {
             throw new RuntimeException(e);
-            
+
         }
     }
 
     /**
      * Builds a new server list from default remote location.
-     * 
+     *
      * @return the server list
      * @throws JAXBException If unmarshalling failed
      */
@@ -101,10 +101,10 @@ public final class ServerListFactory {
             Properties defaults = getDefaults();
             URL url = new URL(defaults.getProperty(PROPERTY_URL));
             return build(url);
-            
+
         } catch (MalformedURLException e) {
             throw new RuntimeException(e);
-            
+
         }
     }
 

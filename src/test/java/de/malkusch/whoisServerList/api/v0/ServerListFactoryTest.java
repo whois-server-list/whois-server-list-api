@@ -17,24 +17,24 @@ public class ServerListFactoryTest {
     public void testBuildFromURL() throws JAXBException, MalformedURLException {
         ServerListFactory factory = new ServerListFactory();
         Serverlist list = factory.build(new URL("http://whois-server-list.github.io/whois-server-list/0.0.1/whois-server-list.xml"));
-        
+
         assertNotNull(list);
     }
-    
+
     @Test
     public void testBuild() throws JAXBException, MalformedURLException {
         ServerListFactory factory = new ServerListFactory();
         Serverlist list = factory.build();
-        
+
         assertNotNull(list);
     }
-    
+
     @Test
     public void testDownload() throws JAXBException, MalformedURLException {
         ServerListFactory factory = new ServerListFactory();
         Serverlist list = factory.download();
-        
+
         assertNotNull(list);
     }
-    
+
 }
