@@ -73,15 +73,15 @@
 				<version>1.2.0</version>
 				<executions>
 					<execution>
-						<id>package-dtd</id>
+						<id>package-xsd</id>
 						<phase>generate-resources</phase>
 						<goals>
 							<goal>wget</goal>
 						</goals>
 						<configuration>
-							<url>${whoisserverlist.dtd.url}</url>
+							<url>${whoisserverlist.xsd.url}</url>
 							<outputDirectory>${project.build.outputDirectory}</outputDirectory>
-							<outputFileName>${whoisserverlist.dtd.file}</outputFileName>
+							<outputFileName>${whoisserverlist.xsd.file}</outputFileName>
 						</configuration>
 					</execution>
 					<execution>

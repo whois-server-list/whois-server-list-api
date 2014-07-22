@@ -13,7 +13,7 @@ import org.junit.Test;
 import de.malkusch.whoisServerList.api.v1.model.DomainList;
 
 @Ignore
-public class ServerListFactoryTest {
+public class DomainListFactoryTest {
 
     @Test
     public void testBuildFromURL() throws JAXBException, MalformedURLException {
