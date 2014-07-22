@@ -10,9 +10,9 @@ This package is available in Maven central:
 
 ```xml
 <dependency>
-        <groupId>de.malkusch.whois-server-list.api.v0</groupId>
+        <groupId>de.malkusch.whois-server-list.api.v1</groupId>
         <artifactId>whois-server-list-api</artifactId>
-        <version>0.0.1</version>
+        <version>1.0.0</version>
 </dependency>
 ```
 
@@ -21,19 +21,21 @@ This package is available in Maven central:
 
 This API is just a compilation of JAXB generated domain model classes:
 
- * [`ServerList`](http://whois-server-list.github.io/whois-server-list-api/apidocs/de/malkusch/whoisServerList/api/v0/model/Serverlist.html)
+ * [`DomainList`](http://whois-server-list.github.io/whois-server-list-api/apidocs/de/malkusch/whoisServerList/api/v1/model/Domainlist.html)
 
- * [`Server`](http://whois-server-list.github.io/whois-server-list-api/apidocs/de/malkusch/whoisServerList/api/v0/model/Server.html)
+ * [`WhoisServer`](http://whois-server-list.github.io/whois-server-list-api/apidocs/de/malkusch/whoisServerList/api/v1/model/WhoisServer.html)
 
- * [`Domain`](http://whois-server-list.github.io/whois-server-list-api/apidocs/de/malkusch/whoisServerList/api/v0/model/Domain.html)
+ * [`Domain`](http://whois-server-list.github.io/whois-server-list-api/apidocs/de/malkusch/whoisServerList/api/v1/model/domain/Domain.html)
+
+ * [`TopLevelDomain`](http://whois-server-list.github.io/whois-server-list-api/apidocs/de/malkusch/whoisServerList/api/v1/model/domain/TopLevelDomain.html)
 
 You can use
-[`ServerListFactory`](http://whois-server-list.github.io/whois-server-list-api/apidocs/de/malkusch/whoisServerList/api/v0/ServerListFactory.html)
-for downloading and unmarshalling the whois server list:
+[`DomainListFactory`](http://whois-server-list.github.io/whois-server-list-api/apidocs/de/malkusch/whoisServerList/api/v1/DomainListFactory.html)
+for downloading and unmarshaling the whois server list:
 
 ```java
-ServerListFactory factory = new ServerListFactory();
-Serverlist serverList = factory.download();
+DomainListFactory factory = new DomainListFactory();
+DomainList domainList = factory.download();
 ```
 
 
