@@ -1,2 +1,4 @@
-de.malkusch.whoisServerList.api.v0
-de.malkusch.whoisServerList.api.v0.model
+de.malkusch.whoisServerList.api.v1
+de.malkusch.whoisServerList.api.v1.adapter
+de.malkusch.whoisServerList.api.v1.model
+de.malkusch.whoisServerList.api.v1.model.domain
