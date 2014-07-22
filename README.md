@@ -21,7 +21,7 @@ This package is available in Maven central:
 
 This API is just a compilation of JAXB generated domain model classes:
 
- * [`DomainList`](http://whois-server-list.github.io/whois-server-list-api/apidocs/de/malkusch/whoisServerList/api/v1/model/Domainlist.html)
+ * [`DomainList`](http://whois-server-list.github.io/whois-server-list-api/apidocs/de/malkusch/whoisServerList/api/v1/model/DomainList.html)
 
  * [`WhoisServer`](http://whois-server-list.github.io/whois-server-list-api/apidocs/de/malkusch/whoisServerList/api/v1/model/WhoisServer.html)
 
