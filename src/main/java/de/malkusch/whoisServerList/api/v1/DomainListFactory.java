@@ -1,16 +1,17 @@
-package de.malkusch.whoisServerList.api.v0;
+package de.malkusch.whoisServerList.api.v1;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Properties;
 
+import javax.annotation.PropertyKey;
 import javax.annotation.concurrent.Immutable;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
 
-import de.malkusch.whoisServerList.api.v0.model.Serverlist;
+import de.malkusch.whoisServerList.api.v1.model.DomainList;
 
 /**
  * Factory for the Whois Server List.
@@ -20,21 +21,20 @@ import de.malkusch.whoisServerList.api.v0.model.Serverlist;
  * @see <a href="https://github.com/whois-server-list/whois-server-list">Whois
  *      Server List</a>
  * @see <a href="bitcoin:1335STSwu9hST4vcMRppEPgENMHD2r1REK">Donations</a>
- *
- * @deprecated As of release 1.0.0, replaced by {@link DomainListFactory)}
  */
 @Immutable
-@Deprecated
-public final class ServerListFactory {
+public final class DomainListFactory {
 
     /**
      * The configuration property for the server list url.
      */
+    @PropertyKey
     public static final String PROPERTY_URL = "whoisserverlist.url";
 
     /**
      * The configuration property for the bundled server list file.
      */
+    @PropertyKey
     public static final String PROPERTY_FILE = "whoisserverlist.file";
 
     /**
@@ -50,8 +50,8 @@ public final class ServerListFactory {
     private static Properties getDefaults() {
         try {
             Properties defaults = new Properties();
-            defaults.load(ServerListFactory.class
-                    .getResourceAsStream(PROPERTYFILE));
+            defaults.load(
+                    DomainListFactory.class.getResourceAsStream(PROPERTYFILE));
             return defaults;
 
         } catch (IOException e) {
@@ -67,10 +67,10 @@ public final class ServerListFactory {
      * @return the server list
      * @throws JAXBException If unmarshalling failed
      */
-    public Serverlist build(URL url) throws JAXBException {
-        JAXBContext context = JAXBContext.newInstance(Serverlist.class);
+    public DomainList build(final URL url) throws JAXBException {
+        JAXBContext context = JAXBContext.newInstance(DomainList.class);
         Unmarshaller unmarshaller = context.createUnmarshaller();
-        return Serverlist.class.cast(unmarshaller.unmarshal(url));
+        return DomainList.class.cast(unmarshaller.unmarshal(url));
     }
 
     /**
@@ -79,7 +79,7 @@ public final class ServerListFactory {
      * @return the server list
      * @throws JAXBException If unmarshalling failed
      */
-    public Serverlist build() {
+    public DomainList build() {
         try {
             Properties defaults = getDefaults();
             URL localList
@@ -99,7 +99,7 @@ public final class ServerListFactory {
      * @return the server list
      * @throws JAXBException If unmarshalling failed
      */
-    public Serverlist download() throws JAXBException {
+    public DomainList download() throws JAXBException {
         try {
             Properties defaults = getDefaults();
             URL url = new URL(defaults.getProperty(PROPERTY_URL));

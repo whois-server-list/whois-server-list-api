@@ -24,8 +24,10 @@ import javax.xml.bind.annotation.XmlRegistry;
  * groups.  Factory methods for each of these are
  * provided in this class.
  *
+ * @deprecated As of release 1.0.0
  */
 @XmlRegistry
+@Deprecated
 public class ObjectFactory {
 
 

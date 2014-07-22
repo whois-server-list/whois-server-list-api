@@ -20,13 +20,14 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- *
+ * @deprecated As of release 1.0.0, replaced by {@link de.malkusch.whoisServerList.api.v1.model.domain.Domain)}
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
     "domain"
 })
 @XmlRootElement(name = "domain")
+@Deprecated
 public class Domain {
 
     @XmlAttribute(name = "name", required = true)

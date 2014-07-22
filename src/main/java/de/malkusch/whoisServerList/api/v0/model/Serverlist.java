@@ -10,6 +10,7 @@ package de.malkusch.whoisServerList.api.v0.model;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
@@ -19,9 +20,11 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.NormalizedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
+import de.malkusch.whoisServerList.api.v1.model.DomainList;
+
 
 /**
- *
+ * @deprecated As of release 1.0.0, replaced by {@link DomainList}
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
@@ -29,6 +32,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
     "server"
 })
 @XmlRootElement(name = "serverlist")
+@Deprecated
 public class Serverlist {
 
     @XmlAttribute(name = "size", required = true)
