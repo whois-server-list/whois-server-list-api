@@ -42,7 +42,7 @@ DomainList domainList = factory.download();
 # License and author
 
 Markus Malkusch <markus@malkusch.de> is the author of this project.
-This project is free and under the GPL.
+This project is free and under the WTFPL.
 
 ## Donations
 
