@@ -7,12 +7,10 @@ import java.net.URL;
 
 import javax.xml.bind.JAXBException;
 
-import org.junit.Ignore;
 import org.junit.Test;
 
 import de.malkusch.whoisServerList.api.v1.model.DomainList;
 
-@Ignore
 public class DomainListFactoryTest {
 
     @Test
