@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>de.malkusch.whois-server-list.api.v0</groupId>
 	<artifactId>whois-server-list-api</artifactId>
-	<version>0.0.2</version>
+	<version>0.0.3-SNAPSHOT</version>
 	<name>Whois server list API</name>
 	<description>XML mapping for the Whois Server List.</description>
 
