@@ -1,11 +1,11 @@
 package de.malkusch.whoisServerList.api.v1.model;
 
-import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.PatternAwareEqualsBuilder;
 
 
 /**
- * A object of the list.
+ * An object of the list.
  *
  * @author markus@malkusch.de
  * @param <T> the implementing ListObject type
@@ -38,7 +38,7 @@ public abstract class ListObject<T extends ListObject<T>> implements Cloneable {
 
     @Override
     public final boolean equals(final Object obj) {
-        return EqualsBuilder.reflectionEquals(this, obj);
+        return PatternAwareEqualsBuilder.reflectionEquals(this, obj);
     }
 
     @Override
