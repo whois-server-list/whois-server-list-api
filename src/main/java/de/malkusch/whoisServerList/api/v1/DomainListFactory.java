@@ -63,7 +63,7 @@ public final class DomainListFactory {
     /**
      * Builds a new server list from an URL.
      *
-     * @param properties  the server list url, not null
+     * @param url  the server list url, not null
      * @return the server list
      * @throws JAXBException If unmarshalling failed
      */
@@ -77,7 +77,6 @@ public final class DomainListFactory {
      * Builds a new server list from the locally bundled server list.
      *
      * @return the server list
-     * @throws JAXBException If unmarshalling failed
      */
     public DomainList build() {
         try {
