@@ -16,7 +16,7 @@ public class DomainListFactoryTest {
     @Test
     public void testBuildFromURL() throws JAXBException, MalformedURLException {
         DomainListFactory factory = new DomainListFactory();
-        DomainList list = factory.build(new URL("http://whois-server-list.github.io/whois-server-list/1.0.0/whois-server-list.xml"));
+        DomainList list = factory.build(new URL("http://whois-server-list.github.io/whois-server-list/1/whois-server-list.xml"));
 
         assertNotNull(list);
     }
