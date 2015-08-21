@@ -9,7 +9,7 @@
 	<parent>
 		<groupId>de.malkusch.parent</groupId>
 		<artifactId>oss-parent</artifactId>
-		<version>1.7</version>
+		<version>1.10</version>
 	</parent>
 
 	<url>https://github.com/whois-server-list/${project.artifactId}</url>
@@ -42,7 +42,7 @@
 		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-lang3</artifactId>
-			<version>3.3.2</version>
+			<version>3.4</version>
 		</dependency>
 	</dependencies>
 
