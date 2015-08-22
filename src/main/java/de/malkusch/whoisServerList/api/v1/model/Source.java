@@ -33,5 +33,12 @@ public enum Source {
      * @see <a href="https://github.com/rfc1036/whois">whois</a>
      */
     MD_WHOIS,
+    
+    /**
+     * Ruby Whois' list.
+     *
+     * @see <a href="http://whoisrb.org/">Ruby Whois</a>
+     */
+    WHOIS_RB,
 
 }
