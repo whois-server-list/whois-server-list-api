@@ -40,5 +40,12 @@ public enum Source {
      * @see <a href="http://whoisrb.org/">Ruby Whois</a>
      */
     WHOIS_RB,
+    
+    /**
+     * PHPWhois' list.
+     *
+     * @see <a href="http://phpwhois.pw/">PHPWhois</a>
+     */
+    PHP_WHOIS,
 
 }
