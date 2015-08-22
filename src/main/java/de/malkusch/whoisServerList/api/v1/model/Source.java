@@ -25,6 +25,13 @@ public enum Source {
      *
      * @see <a href="https://publicsuffix.org/">https://publicsuffix.org/</a>
      */
-    PSL
+    PSL,
+
+    /**
+     * Marco d'Itri's list.
+     *
+     * @see <a href="https://github.com/rfc1036/whois">whois</a>
+     */
+    MD_WHOIS,
 
 }
