@@ -47,5 +47,12 @@ public enum Source {
      * @see <a href="http://phpwhois.pw/">PHPWhois</a>
      */
     PHP_WHOIS,
+    
+    /**
+     * php-whois' list.
+     *
+     * @see <a href="https://github.com/regru/php-whois">php-whois</a>
+     */
+    PHOIS,
 
 }
