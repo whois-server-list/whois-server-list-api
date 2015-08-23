@@ -76,8 +76,19 @@ public final class TopLevelDomain extends Domain {
      *
      * @return the registration service, maybe null
      */
-    public URL getRegistratonService() {
+    public URL getRegistrationService() {
         return registrationService;
+    }
+    
+    /**
+     * Returns the URL of the registration service.
+     *
+     * @return the registration service, maybe null
+     * @deprecated use {@link #getRegistrationService()}
+     */
+    @Deprecated
+    public URL getRegistratonService() {
+        return getRegistrationService();
     }
 
     /**
@@ -85,8 +96,19 @@ public final class TopLevelDomain extends Domain {
      *
      * @param registrationService the registration service, may be null
      */
-    public void setRegistratonService(final URL registrationService) {
+    public void setRegistrationService(final URL registrationService) {
         this.registrationService = registrationService;
+    }
+    
+    /**
+     * Sets the URL of the registration service.
+     *
+     * @param registrationService the registration service, may be null
+     * @deprecated use {@link #setRegistrationService(URL)}
+     */
+    @Deprecated
+    public void setRegistratonService(final URL registrationService) {
+        setRegistrationService(registrationService);
     }
 
     /**
