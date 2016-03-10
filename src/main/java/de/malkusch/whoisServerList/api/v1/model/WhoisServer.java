@@ -1,10 +1,13 @@
 package de.malkusch.whoisServerList.api.v1.model;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.regex.Pattern;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
 
 /**
  * Whois server.
@@ -32,6 +35,12 @@ public final class WhoisServer extends ListObject<WhoisServer> {
     private Pattern availablePattern;
 
     /**
+     * The error patterns, may be empty.
+     */
+    @XmlElement(name = "errorPattern")
+    private List<Pattern> errorPatterns = new ArrayList<>();
+
+    /**
      * Returns the whois server.
      *
      * @return the host, not null
@@ -54,7 +63,7 @@ public final class WhoisServer extends ListObject<WhoisServer> {
      * Returns the pattern for checking the server response for an available
      * domain.
      *
-     * @return the available patter, may be null
+     * @return the available pattern, may be null
      */
     public Pattern getAvailablePattern() {
         return availablePattern;
@@ -69,6 +78,27 @@ public final class WhoisServer extends ListObject<WhoisServer> {
      */
     public void setAvailablePattern(final Pattern availablePattern) {
         this.availablePattern = availablePattern;
+    }
+
+    /**
+     * Returns the pattern for checking the server response for an error
+     * response.
+     *
+     * @return the error patterns, may be empty.
+     */
+    public List<Pattern> getErrorPatterns() {
+        return errorPatterns;
+    }
+
+    /**
+     * Sets the error pattern for checking the server response for an error
+     * response.
+     *
+     * @param errorPatterns
+     *            the error patterns, maybe empty
+     */
+    public void setErrorPatterns(final List<Pattern> errorPatterns) {
+        this.errorPatterns = errorPatterns;
     }
 
     @Override

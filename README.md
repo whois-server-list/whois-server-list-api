@@ -12,7 +12,7 @@ This package is available in Maven central:
 <dependency>
         <groupId>de.malkusch.whois-server-list.api.v1</groupId>
         <artifactId>whois-server-list-api</artifactId>
-        <version>2.0.3</version>
+        <version>2.1.0</version>
 </dependency>
 ```
 
