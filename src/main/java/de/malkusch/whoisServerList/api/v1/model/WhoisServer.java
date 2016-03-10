@@ -5,9 +5,6 @@ import java.util.regex.Pattern;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
-
-import de.malkusch.whoisServerList.api.v1.adapter.XmlCaseInsensitivePatternAdapter;
 
 /**
  * Whois server.
@@ -30,10 +27,8 @@ public final class WhoisServer extends ListObject<WhoisServer> {
     private String host;
 
     /**
-     * The pattern for available domains.
-     * This may be null.
+     * The pattern for available domains. This may be null.
      */
-    @XmlJavaTypeAdapter(XmlCaseInsensitivePatternAdapter.class)
     private Pattern availablePattern;
 
     /**
@@ -48,15 +43,16 @@ public final class WhoisServer extends ListObject<WhoisServer> {
     /**
      * Sets the whois server.
      *
-     * @param host  the server, not null
+     * @param host
+     *            the server, not null
      */
     public void setHost(final String host) {
         this.host = host;
     }
 
     /**
-     * Returns the pattern for checking the server response
-     * for an available domain.
+     * Returns the pattern for checking the server response for an available
+     * domain.
      *
      * @return the available patter, may be null
      */
@@ -65,10 +61,11 @@ public final class WhoisServer extends ListObject<WhoisServer> {
     }
 
     /**
-     * Sets the pattern for checking the server response for
-     * an available domain.
+     * Sets the pattern for checking the server response for an available
+     * domain.
      *
-     * @param availablePattern the available pattern, maybe null
+     * @param availablePattern
+     *            the available pattern, maybe null
      */
     public void setAvailablePattern(final Pattern availablePattern) {
         this.availablePattern = availablePattern;
