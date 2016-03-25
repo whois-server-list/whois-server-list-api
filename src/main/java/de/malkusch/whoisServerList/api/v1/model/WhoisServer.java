@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Pattern;
 
+import javax.annotation.Nullable;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
@@ -35,6 +36,11 @@ public final class WhoisServer extends ListObject<WhoisServer> {
     private Pattern availablePattern;
 
     /**
+     * The optional query format in a printf style.
+     */
+    private String queryFormat;
+
+    /**
      * The error patterns, may be empty.
      */
     @XmlElement(name = "errorPattern")
@@ -57,6 +63,33 @@ public final class WhoisServer extends ListObject<WhoisServer> {
      */
     public void setHost(final String host) {
         this.host = host;
+    }
+
+    /**
+     * Sets the optional query format.
+     *
+     * @param queryFormat
+     *            query format in C's printf style, or null
+     */
+    public void setQueryFormat(@Nullable final String queryFormat) {
+        this.queryFormat = queryFormat;
+    }
+
+    /**
+     * Returns the optional query format in a C printf style.
+     * 
+     * The placeholder %s will be replaced by the actual queried domain. E.g. a
+     * format of "=%s" and a query for "example.net" would result in
+     * "=example.net".
+     * 
+     * If the format is {@code null} the whois server accepts the unformatted
+     * domain.
+     * 
+     * @return optional query format in C's printf style, or null
+     */
+    @Nullable
+    public String getQueryFormat() {
+        return queryFormat;
     }
 
     /**
