@@ -42,7 +42,7 @@ public abstract class ListObject<T extends ListObject<T>> implements Cloneable {
     }
 
     @Override
-    public final int hashCode() {
+    public int hashCode() {
         return HashCodeBuilder.reflectionHashCode(this);
     }
 

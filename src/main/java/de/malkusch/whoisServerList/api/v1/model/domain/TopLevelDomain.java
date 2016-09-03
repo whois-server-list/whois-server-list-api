@@ -129,4 +129,9 @@ public final class TopLevelDomain extends Domain {
         this.state = state;
     }
 
+    @Override
+    public int hashCode() {
+        return getName().hashCode();
+    }
+
 }
